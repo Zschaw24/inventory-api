@@ -1,41 +1,58 @@
-async function loadListings() {
-    const container = document.getElementById("listings-container");
-    const errorMessage = document.getElementById("error-message");
+document.addEventListener('DOMContentLoaded', function() {
+    fetchInventoryListings();
+});
 
+async function fetchInventoryListings() {
     try {
-        const response = await fetch("http://127.0.0.1:8000/listings");
+        const response = await fetch('/listings');
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        container.innerHTML = ""; // clear existing content
-
-        if (data.count === 0) {
-            container.innerHTML = "<p>No listings found.</p>";
-            return;
-        }
-
-        data.listings.forEach(item => {
-            const div = document.createElement("div");
-            div.style.border = "1px solid #ccc";
-            div.style.padding = "10px";
-            div.style.marginBottom = "10px";
-            div.innerHTML = `
-                <h2>${item.title_clean || "No Title"}</h2>
-                <p>Author/Brand: ${item.author_or_brand || "N/A"}</p>
-                <p>Category: ${item.category_clean || "N/A"}</p>
-                <p>Price: ${item.price ? "$" + item.price : "N/A"}</p>
-                <img src="${item.image_url || ''}" alt="Product Image" width="150">
-                <p>${item.summary || ""}</p>
-            `;
-            container.appendChild(div);
-        });
-
+        displayListings(data.listings); // Assuming the API returns an object with a 'listings' array
     } catch (error) {
-        errorMessage.style.display = "block";
-        errorMessage.textContent = `Error loading listings: ${error.message}`;
+        console.error('Error fetching inventory listings:', error);
+        displayError('Failed to load inventory listings. Please try again later.');
     }
 }
 
-// Call the function to load listings when page loads
-window.onload = loadListings;
+function displayListings(listings) {
+    const container = document.getElementById('listings-container');
+    container.innerHTML = ''; // Clear previous content
+
+    if (listings.length === 0) {
+        container.innerHTML = '<p>No listings available.</p>';
+        return;
+    }
+
+    listings.forEach(listing => {
+        const listingDiv = document.createElement('div');
+        listingDiv.className = 'listing';
+
+        // Create elements for title, price, and image
+        const title = document.createElement('h2');
+        title.textContent = listing['item-name'] || 'No title available';
+
+        const price = document.createElement('p');
+        price.textContent = `Price: $${listing.price || 'N/A'}`;
+
+        const image = document.createElement('img');
+        image.src = listing.image_url || 'placeholder.jpg'; // Use a placeholder if no image URL
+        image.alt = listing['item-name'] || 'Product image';
+        image.style.width = '150px'; // Set a fixed width for images
+
+        // Append elements to the listing div
+        listingDiv.appendChild(title);
+        listingDiv.appendChild(price);
+        listingDiv.appendChild(image);
+
+        // Append the listing div to the container
+        container.appendChild(listingDiv);
+    });
+}
+
+function displayError(message) {
+    const errorDiv = document.getElementById('error-message');
+    errorDiv.textContent = message;
+    errorDiv.style.display = 'block';
+}
