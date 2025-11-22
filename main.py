@@ -31,14 +31,6 @@ app.mount("/static", StaticFiles(directory="."), name="static")
 def read_root():
     return FileResponse("index.html")
 
-@app.get("/api")
-def root():
-    return {"message": "Inventory API is live!"}
-
-@app.get("/")
-def root():
-    return {"message": "Inventory API is live!"}
-
 @app.get("/listings")
 def get_listings(
     sku: Optional[str] = None,
