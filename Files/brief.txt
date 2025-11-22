@@ -1,0 +1,41 @@
+Client
+Schaw Consulting
+
+Business Type
+professional consulting site
+
+Showcase
+showcases a curated book portfolio, provides self-improvement and personal development resources
+
+Services
+Inventory & eCommerce Optimization, Helping clients manage online inventories efficiently, Integrating APIs for live inventory tracking (like Amazon SP-API), Streamlining product listings, pricing, and sales strategies, Business Systems & Automation, Automating repetitive tasks in small business workflows, Building custom tools to track, analyze, and report data, Optimizing processes for book reselling, retail, or similar operations, Personal & Professional Growth Guidance (light consulting/mentorship angle), Coaching on productivity, self-improvement, and professional development, Curating learning resources (like books) to enhance client skills, Tech & Web Solutions for Small Businesses, Advising on website setup, landing pages, and eCommerce sites, Selecting themes, tools, and integrations for scalability and efficiency, Helping businesses choose cost-effective, lean solutions without unnecessary expenses
+
+Goals
+Attract consultation inquiries, Present consulting expertise clearly, Encourage potential clients to reach out via contact forms or CTA buttons, Showcase book portfolio/active work, Highlight curated books as both a portfolio of work and a value-add resource, Allow visitors to explore and engage with the books, Provide a professional brand presence, Establish credibility and trust for both consulting and book-related work, Present a polished, approachable, growth-oriented professional image, Engage visitors with self-improvement resources, Offer books for self-improvement and professional growth, Subtly promote learning and development aligned with consulting ethos, Prepare for future live inventory integration, Build templates and structure for future SP-API integration, Ensure design is compatible with dynamic data without redesign
+
+Features
+newsletter signup section on Home page, collapsible filters on mobile for Book Store / Inventory page
+
+Tone And Voice
+Professional — establishes credibility for consulting services, Approachable — visitors feel welcome, not intimidated, Encouraging / Growth-Oriented — aligns with self-improvement and personal development ethos, Confident but Friendly — authoritative without being stiff, Voice: Clear, concise, and easy to read, Conversational enough to feel personal and authentic, Highlights value and action: “Here’s what we do, here’s how it helps you, here’s what to do next”, Subtle persuasive elements for the book portfolio: “While you’re here, explore these resources to grow personally and professionally”, Example phrasing for landing page hero section: “Building digital systems that work as hard as you do.” Professional + confident, Short, clear, and action-oriented, Sets the stage for consulting expertise and book portfolio
+
+Sitemap
+Home, Book Store / Inventory, Services
+
+Audience
+Age range: 25–45 years old, all genders, Small team leaders, entrepreneurs, or solo business owners, People who value efficiency, self-improvement, and smart systems, Likely tech-savvy or at least comfortable adopting digital solutions, Interested in personal and professional growth, including curated learning resources like books, Business & Entrepreneurship: Running small teams or solo ventures efficiently, Streamlining operations and inventory management, Learning strategies to grow their business, Technology & Digital Tools: Leveraging software, APIs, and automation for productivity, Using data-driven tools to optimize processes, Exploring web, eCommerce, and tech solutions, Self-Improvement & Personal Development: Productivity, time management, and skill-building, Reading curated books or resources for growth, Continuous learning and professional development, Consulting & Mentorship: Seeking expert guidance for solving business challenges, Learning from case studies or proven systems, Accessing actionable strategies they can implement immediately, Efficiency & Smart Systems: Finding lean, cost-effective solutions, Avoiding unnecessary complexity or expensive tools, Optimizing workflows for maximum output with minimal effort.
+
+Brand Style
+Primary Color: Deep Blue (#1A3D7C), Secondary Color: Vibrant Teal (#1ABC9C), Accent Color: Warm Orange (#E67E22), Neutral Colors: Light Gray (#F5F5F5), Dark Gray (#333333), Typography: Headings - Sans-serif, modern, bold (e.g., Montserrat, Poppins, or Open Sans), Body Text - Sans-serif, readable, friendly (e.g., Lato or Roboto), Style Preferences: Clean and minimalistic, clear hierarchy, plenty of whitespace, subtle use of accent color for CTAs, consistent styling across all pages.
+
+Integrations
+none
+
+Plugins
+Kadence Free, Elementor Free
+
+Site Language
+English
+
+Additional Requirements
+build landing page first, inventory pages later, templates/layouts ready for SP-API integration
