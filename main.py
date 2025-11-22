@@ -1,5 +1,7 @@
 import math
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from typing import Optional
 from pymongo import MongoClient
 from config import MONGO_URI, DB_NAME, COLLECTION_NAME
@@ -21,6 +23,17 @@ app = FastAPI(title="Inventory API")
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
 collection = db[COLLECTION_NAME]
+
+# Serve static files
+app.mount("/static", StaticFiles(directory="."), name="static")
+
+@app.get("/")
+def read_root():
+    return FileResponse("index.html")
+
+@app.get("/api")
+def root():
+    return {"message": "Inventory API is live!"}
 
 @app.get("/")
 def root():
